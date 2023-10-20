@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const apikey = "07ee0c55b5b41618ef850c827b31606d";
+      const apiurl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+
+      async function check(city) {
+        const resource = await fetch(apiurl + city + `&appid=${apikey}`);
+        const data = await resource.json();
+        console.log(data);
+      }
+      check(tokyo);
+    </script>
+</body>
+</html>
